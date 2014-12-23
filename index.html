@@ -3,10 +3,15 @@
     <title>Knotis: What E-Mail Could Be</title>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,800italic,300,400,800,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   </head>
   <body>
-    <div class="wrapper">
-      <div id="mc_embed_signup">
+  <div class="vid-container">
+  <video id="Video1" class="bgvid back" autoplay="false" muted="muted" preload="auto" loop>
+      <source src="//knot.is/emails.mov">
+  </video>
+  <div class="inner-container">
+    <div class="box">
       <h1 class="gradient-mask-text">KNOTIS</h1>
       <article class="gradient-mask-text">
         Knotis is how you communicate with anyone, about anything,
@@ -21,11 +26,32 @@
           <div class="clear"><input type="submit" value="Keep Me Informed" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
           </div>
       </form>
-      </div>
     </div>
-    <div class="overlay"></div>
-    <video autoplay id="bgvid" loop>
-      <source src="//knot.is/emails.mov">
-    </video>
+  </div>
+</div>
+    <script>
+    var promises = [];
+    function makePromise(i, video) {
+      promises[i] = new $.Deferred();
+      // This event tells us video can be played all the way through, without stopping or buffering
+      video.oncanplaythrough = function() {
+        // Resolve the promise
+        promises[i].resolve();
+      }
+    }
+    // Pause all videos and create the promise array
+    $('video').each(function(index){
+      this.pause();
+      makePromise(index, this);
+    })
+
+    // Wait for all promises to resolve then start playing
+    $.when.apply(null, promises).done(function () {
+      $('video').each(function(){
+        this.play();
+      });
+    });
+
+    </script>
   </body>
 </html>
