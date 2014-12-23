@@ -96,17 +96,6 @@ input[type="submit"]:hover, input[type="submit"]:active {
   color: #E6E9ED;
 }
 
-.noise:before{
-  content: "";
-  position: absolute;
-  z-index: -1;
-  opacity: 0.4;
-  top:0;
-  bottom:0;
-  left:0;
-  right:0;
-  }
-
 .gradient-mask-text{
   width: 60vw;
   margin: 0 auto;
