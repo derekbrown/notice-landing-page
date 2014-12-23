@@ -1,4 +1,4 @@
-#Knotis Landing Page
+#Knotis Landing Page (Kelp)
 
 ##What is Knotis Landing Page (Kelp)?
 Knotis Landing Page (Kelp) is website at and the landing page for [Knotis](http://knot.is), an upcoming asynchronous messaging platform.
