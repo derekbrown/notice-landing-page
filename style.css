@@ -1,9 +1,8 @@
-* {
-  box-sizing: border-box;
-  text-rendering: optimizeLegibility;
-}
-
 body {
+  background: #F5F5F5;
+  color: #282828 !important;
+  font-family: 'Open Sans', 'Helvetica', 'Arial', 'sans-serif';
+  font-size: 1.25em;
   margin: 0;
   padding: 0;
 }
@@ -11,7 +10,7 @@ body {
 .content {
   margin: 0 auto;
   position: relative;
-  top: 25%;
+  top: 10%;
 }
 
 .logo {
@@ -75,7 +74,7 @@ body {
   color: rgba(38,38,38,0.9);
   float: left;
   font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
-  font-size: 1.4em;
+  font-size: 1.1em;
   font-weight: bold;
   letter-spacing: 1px;
   margin-top: 10px;
@@ -139,4 +138,176 @@ body {
     transform: perspective(500px) rotateY(0deg);
     opacity: 1;
   }
+}
+
+
+.form-error {
+  background: #FFD730;
+  font-weight:bold;
+  margin-left: -10px;
+  margin-top: 15px;
+  padding: 5px 10px;
+  position:relative;
+  width: 88%;
+}
+
+.form-error:after {
+  content: '';
+  border-top: 37px solid transparent;
+  border-left: 20px solid #FFD730;
+  right: -20px;
+  width: 0px;
+  height: 0px;
+  top: 0px;
+  position: absolute;
+}
+
+.form-input {
+  display: block;
+}
+
+.form-group {
+  float: left;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.form-text {
+  z-index: 10;
+  width: 100%;
+  background: transparent;
+  opacity: 0;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.9);
+}
+
+.form-label {
+  position: relative;
+  width: 100%;
+  color: #282828;
+  text-align: left;
+}
+
+.form-label::before {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  width: 100%;
+  height: 4em;
+  background: #448AFF;
+  -webkit-transform: perspective(1000px) rotate3d(1, 0, 0, 90deg);
+  transform: perspective(1000px) rotate3d(1, 0, 0, 90deg);
+  -webkit-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+}
+
+.form-label::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0.25em;
+  background: #282828;
+  -webkit-transform-origin: 50% 0%;
+  transform-origin: 50% 0%;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+}
+
+.form-label-content {
+  padding: 0.75em 0;
+}
+
+.form-text:focus,
+.input-filled .form-text {
+  opacity: 1;
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+
+.form-text:focus + .form-label::before,
+.input-filled .form-label::before {
+  -webkit-transform: perspective(1000px) rotate3d(1, 0, 0, 0deg);
+  transform: perspective(1000px) rotate3d(1, 0, 0, 0deg);
+}
+
+.form-text:focus + .form-label,
+.input-filled .form-label {
+  pointer-events: none;
+}
+
+.form-text:focus + .form-label::after,
+.input-filled .form-label::after {
+  -webkit-transform: perspective(1000px) rotate3d(1, 0, 0, -90deg);
+  transform: perspective(1000px) rotate3d(1, 0, 0, -90deg);
+}
+
+.form-button{
+  background: #666666;
+  color: #FFFFFF;
+  border: none;
+  display: inline-block;
+  font-weight: bold;
+  margin: 20px 9px 0px;
+  padding: 0.3em 0.5em;
+  position: relative;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.9);
+}
+
+.form-button.highlight{
+  background-color: #8BC34A;
+}
+
+.form-button:first-of-type{
+  margin-left: -10px;
+}
+
+.form-button:after,
+.form-button:before{
+  content: '';
+  width: 0px;
+  height: 0px;
+  top: 0px;
+  position: absolute;
+}
+
+.form-button:before{
+  border-bottom: 39px solid transparent;
+  border-right: 20px solid #666666;
+  left: -20px;
+}
+
+.form-button.highlight:before {
+  border-right: 20px solid #8BC34A;
+}
+
+.form-button.highlight:after {
+  border-left: 20px solid #8BC34A;
+}
+
+.form-button:after {
+  border-top: 39px solid transparent;
+  border-left: 20px solid #666666;
+  right: -20px;
+}
+
+.form-button:first-of-type:before, .form-button:last-of-type:after {
+  border: none;
+}
+
+.form-button:hover, .form-button:focus {
+  background: #448AFF;
+}
+
+.form-button:hover:before, .form-button:focus:before{
+  border-right: 20px solid #448AFF;
+}
+
+.form-button:hover:after, .form-button:focus:after{
+  border-left: 20px solid #448AFF;
 }
