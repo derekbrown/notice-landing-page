@@ -14,7 +14,7 @@ body {
 
 .logo {
   margin: 0 auto;
-  width: 300px;
+  width: 150px;
 }
 
 .logo-icon {
@@ -25,9 +25,9 @@ body {
 .top-kay, .bottom-kay {
   background-color: #448AFF;
   float:left;
-  height:200px;
+  height:100px;
   position:relative;
-  width: 200px;
+  width: 100px;
 }
 
 .bottom-kay {
@@ -41,8 +41,8 @@ body {
 }
 
 .top-kay-point {
-  border-top: 200px solid #448AFF;
-  border-right: 100px solid transparent;
+  border-top: 100px solid #448AFF;
+  border-right: 50px solid transparent;
   float:left;
   transform-origin: center left;
   -webkit-animation: top-kay-point 1.5s;
@@ -58,8 +58,8 @@ body {
 }
 
 .bottom-kay-point {
-  border-top: 200px solid transparent;
-  border-left: 100px solid #448AFF;
+  border-top: 100px solid transparent;
+  border-left: 50px solid #448AFF;
   float:left;
   transform-origin: center left;
   -webkit-animation: bottom-kay-point 1.5s;
