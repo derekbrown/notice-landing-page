@@ -50,5 +50,17 @@
       </button>
     </form>
   </div>
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script>
+  $('.form-text').focusin(function(e) {
+    $(this).parent('.form-input').addClass('input-filled');
+  })
+
+  $('.form-text').focusout(function(e) {
+    if(this.value.trim() === '') {
+      $(this).parent('.form-input').removeClass('input-filled');
+    }
+  })
+  </script>
   </body>
 </html>

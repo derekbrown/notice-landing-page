@@ -9,12 +9,13 @@ body {
 
 .content {
   margin: 0 auto;
+  padding-top: 70px;
   width: 420px;
 }
 
 .logo {
   margin: 0 auto;
-  width: 150px;
+  width: 75px;
 }
 
 .logo-icon {
@@ -25,9 +26,9 @@ body {
 .top-kay, .bottom-kay {
   background-color: #448AFF;
   float:left;
-  height:100px;
+  height:50px;
   position:relative;
-  width: 100px;
+  width: 50px;
 }
 
 .bottom-kay {
@@ -41,8 +42,8 @@ body {
 }
 
 .top-kay-point {
-  border-top: 100px solid #448AFF;
-  border-right: 50px solid transparent;
+  border-top: 50px solid #448AFF;
+  border-right: 25px solid transparent;
   float:left;
   transform-origin: center left;
   -webkit-animation: top-kay-point 1.5s;
@@ -58,8 +59,8 @@ body {
 }
 
 .bottom-kay-point {
-  border-top: 100px solid transparent;
-  border-left: 50px solid #448AFF;
+  border-top: 50px solid transparent;
+  border-left: 25px solid #448AFF;
   float:left;
   transform-origin: center left;
   -webkit-animation: bottom-kay-point 1.5s;
@@ -73,7 +74,7 @@ body {
   color: rgba(38,38,38,0.9);
   float: left;
   font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
-  font-size: 1.1em;
+  font-size: .8em;
   font-weight: bold;
   letter-spacing: 1px;
   margin-top: 10px;
@@ -232,6 +233,7 @@ form {
 
 .form-button{
   background: #666666;
+  clear: left;
   color: #FFFFFF;
   border: none;
   display: block;
@@ -279,7 +281,7 @@ form {
   right: -20px;
 }
 
-.form-button:first-of-type:before, .form-button:last-of-type:after {
+.form-button:first-of-type:before{
   border: none;
 }
 

@@ -2,7 +2,7 @@
   position: relative;
   z-index: 1;
   display: inline-block;
-  margin: 1em;
+  margin: 0.1em 1em;
   max-width: 400px;
   width: calc(100% - 2em);
   vertical-align: top;
@@ -11,8 +11,7 @@
 .form-text {
   position: relative;
   display: block;
-  float: right;
-  padding: 0.7em;
+  padding: 0.7em 0;
   width: 80%;
   border: none;
   border-radius: 0;
@@ -20,6 +19,7 @@
   color: #FFFFFF;
   font-weight: bold;
   -webkit-appearance: none; /* for box shadows to show on iOS */
+  margin-left: -14px;
 }
 
 .form-text:focus {
