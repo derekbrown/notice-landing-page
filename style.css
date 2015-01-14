@@ -9,8 +9,7 @@ body {
 
 .content {
   margin: 0 auto;
-  position: relative;
-  top: 10%;
+  width: 420px;
 }
 
 .logo {
@@ -140,33 +139,17 @@ body {
   }
 }
 
-
-.form-error {
-  background: #FFD730;
-  font-weight:bold;
-  margin-left: -10px;
-  margin-top: 15px;
-  padding: 5px 10px;
-  position:relative;
-  width: 88%;
-}
-
-.form-error:after {
-  content: '';
-  border-top: 37px solid transparent;
-  border-left: 20px solid #FFD730;
-  right: -20px;
-  width: 0px;
-  height: 0px;
-  top: 0px;
-  position: absolute;
+form {
+  padding-left: 30px;
 }
 
 .form-input {
   display: block;
+  float: left;
 }
 
 .form-group {
+  clear: both;
   float: left;
   margin-bottom: 20px;
   margin-top: 10px;
@@ -251,7 +234,7 @@ body {
   background: #666666;
   color: #FFFFFF;
   border: none;
-  display: inline-block;
+  display: block;
   font-weight: bold;
   margin: 20px 9px 0px;
   padding: 0.3em 0.5em;
@@ -310,4 +293,9 @@ body {
 
 .form-button:hover:after, .form-button:focus:after{
   border-left: 20px solid #448AFF;
+}
+
+.clear {
+  clear: both;
+  float: left;
 }
